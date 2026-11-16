@@ -871,5 +871,101 @@ if(document.getElementById('invItemsBody').children.length===0)addInvoiceItem({d
 ['invBusiness','invGSTIN','invAddress','invCity','invState','invStateCode','invNumber','invDate','invSupply','invReverseCharge','invCustomer','invBuyerGSTIN','invBuyerAddress','invBuyerCity','invBuyerState','invBuyerStateCode','invShipName','invShipGSTIN','invShipAddress','invShipCity','invShipState','invShipStateCode','invDeliveryNote','invPO','invFreight','invOtherChargeTaxRate','invRoundOff','invPaymentTerms'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',buildInvoice);if(el)el.addEventListener('change',buildInvoice);});
 resetGST();calculateTDS();calculateIncomeTax();buildInvoice();
 </script>
+
+
+
+<script>
+/* CY ACCOUNTING HUB - ALL DASHBOARD CARDS DIRECT OPEN */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const dashboard = document.getElementById("main-dashboard");
+  const hero = document.getElementById("home");
+
+  if (!dashboard) return;
+
+  const backButton = document.createElement("button");
+  backButton.type = "button";
+  backButton.textContent = "← Dashboard पर वापस जाएँ";
+  backButton.style.cssText =
+    "display:block;margin:0 0 18px;padding:12px 18px;background:#123b63;color:white;border:0;border-radius:9px;font-size:15px;font-weight:bold;";
+
+  let currentTarget = null;
+
+  dashboard.querySelectorAll(".dashboard-card").forEach(function(card) {
+
+    card.addEventListener("click", function(event) {
+
+      const href = card.getAttribute("href");
+      if (!href || !href.startsWith("#")) return;
+
+      const target = document.getElementById(href.substring(1));
+
+      if (!target) {
+        event.preventDefault();
+        alert("इस कार्ड का सेक्शन अभी वेबसाइट में नहीं मिला।");
+        return;
+      }
+
+      event.preventDefault();
+
+      document.querySelectorAll(".topic-content").forEach(function(section) {
+        section.classList.remove("active");
+      });
+
+      if (target.classList.contains("topic-content")) {
+        target.classList.add("active");
+      }
+
+      currentTarget = target;
+
+      dashboard.style.display = "none";
+
+      if (hero) {
+        hero.style.display = "none";
+      }
+
+      if (!backButton.isConnected) {
+        target.prepend(backButton);
+      }
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    });
+
+  });
+
+  backButton.addEventListener("click", function() {
+
+    if (currentTarget && currentTarget.classList.contains("topic-content")) {
+      currentTarget.classList.remove("active");
+    }
+
+    backButton.remove();
+    currentTarget = null;
+
+    dashboard.style.display = "";
+
+    if (hero) {
+      hero.style.display = "";
+    }
+
+    dashboard.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  });
+
+});
+</script>
+
+
+
+
+  
 </body>
 </html>
