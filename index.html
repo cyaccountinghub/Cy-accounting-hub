@@ -54,6 +54,175 @@ footer{background:#102f50;color:#e2efff;padding:22px 0}footer a{color:#fff}.smal
 #invoice .tax-invoice-items{min-width:1550px;font-size:12px}#invoice .tax-invoice-items input,#invoice .tax-invoice-items select{min-width:82px;padding:6px;font-size:12px}#invoice .tax-invoice-items td{padding:5px}#invoice #invoicePrint{background:#fff;color:#111;border:1px solid #8794a5}#invoice #invoicePrint h2,#invoice #invoicePrint h3{color:#123b63}#invoice #invoicePrint table{font-size:11px}#invoice #invoicePrint th,#invoice #invoicePrint td{padding:5px;border:1px solid #8b98a8}#invoice #invoicePrint .invoice-totals{max-width:620px;margin-left:auto}#invoice #invoicePrint .invoice-totals th{width:65%}#invoice #invoicePrint .tax-invoice-heading{text-align:center;border-bottom:2px solid #123b63;margin-bottom:10px}#invoice #invoicePrint .tax-invoice-heading h2{margin-bottom:0}#invoice #invoicePrint .invoice-signatures{display:flex;justify-content:space-between;gap:20px;margin-top:45px;flex-wrap:wrap}#invoice #invoicePrint .small{margin-top:25px}
 @media print{body.invoice-print-mode *{visibility:hidden!important}body.invoice-print-mode #invoice,body.invoice-print-mode #invoice *{visibility:visible!important}body.invoice-print-mode #invoice{display:block!important;position:absolute!important;left:0!important;top:0!important;width:100%!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}body.invoice-print-mode #invoice .calcgrid,body.invoice-print-mode #invoice .action-row,body.invoice-print-mode #invoice .note,body.invoice-print-mode #invoice>h2,body.invoice-print-mode #invoice>h3,body.invoice-print-mode #invoice>p,body.invoice-print-mode #invValidationStatus{display:none!important}body.invoice-print-mode #invoicePrint{display:block!important;position:static!important;width:100%!important;border:0!important;box-shadow:none!important;margin:0!important;padding:8px!important}body.invoice-print-mode #invoicePrint *{visibility:visible!important}body.invoice-print-mode #invoicePrint table{font-size:8px!important}body.invoice-print-mode #invoicePrint th,body.invoice-print-mode #invoicePrint td{padding:3px!important}body.invoice-print-mode #invoicePrint .tablewrap{overflow:visible!important}body.invoice-print-mode #invoicePrint .tax-invoice-heading h2{font-size:22px!important}}
 </style>
+  
+<style>
+/* CY ACCOUNTING HUB - PROFESSIONAL DESIGN */
+
+header {
+  background: linear-gradient(135deg,#102b49,#1769aa,#087f8c);
+  padding: 28px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+header .brand {
+  align-items: center;
+  gap: 16px;
+}
+
+header .logo {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#ffbd45,#f05b78,#7657df);
+  border: 3px solid #fff;
+  font-size: 24px;
+  box-shadow: 0 5px 18px #0004;
+}
+
+header .brand-title {
+  font-size: clamp(27px,5vw,43px);
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #e6f3ff;
+  font-size: 14px;
+}
+
+nav {
+  background: #fff;
+  border-bottom: 3px solid #1769aa;
+}
+
+.navinner a {
+  transition: .2s;
+}
+
+.navinner a:hover {
+  background: #1769aa;
+  color: #fff;
+}
+
+.hero {
+  border: 1px solid #d5e4f4;
+  border-top: 5px solid #f0b429;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px #123b6312;
+}
+
+.dashboard {
+  margin: 22px 0;
+}
+
+.dashboard-heading {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.dashboard-heading h2 {
+  font-size: clamp(23px,4vw,30px);
+  color: #123b63;
+  margin-bottom: 5px;
+}
+
+.dashboard-heading p {
+  color: #64748b;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 15px;
+}
+
+.dashboard-card {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 16px;
+  min-height: 145px;
+  border-radius: 17px;
+  box-shadow: 0 6px 16px #123b6320;
+  transition: transform .2s,box-shadow .2s;
+  border: 1px solid #ffffff40;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px #123b6330;
+}
+
+.dashboard-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.dashboard-card h3 {
+  color: #fff;
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.dashboard-card p {
+  color: #ffffffeb;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dash-accounting {
+  background: linear-gradient(135deg,#123b63,#287bc1);
+}
+
+.dash-gst {
+  background: linear-gradient(135deg,#087f8c,#12a89b);
+}
+
+.dash-tax {
+  background: linear-gradient(135deg,#6841b9,#9366e8);
+}
+
+.dash-tds {
+  background: linear-gradient(135deg,#b45b18,#ed9637);
+}
+
+.dash-tally {
+  background: linear-gradient(135deg,#176b45,#2da56b);
+}
+
+.dash-practice {
+  background: linear-gradient(135deg,#b52e58,#e65d82);
+}
+
+@media(max-width:700px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 11px;
+  }
+
+  .dashboard-card {
+    min-height: 140px;
+    padding: 15px 12px;
+  }
+
+  .dashboard-card h3 {
+    font-size: 16px;
+  }
+
+  .dashboard-card p {
+    font-size: 12px;
+  }
+}
+
+@media(max-width:360px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+  
 
 </head>
 <body>
@@ -77,6 +246,59 @@ footer{background:#102f50;color:#e2efff;padding:22px 0}footer a{color:#fff}.smal
 <div class="searchbox"><label for="search">नोट्स में विषय खोजें</label><input id="search" oninput="searchNotes()" placeholder="जैसे: debit, ledger, depreciation..." type="search"/></div>
 <p class="small">किसी topic button पर क्लिक करें। Notes को PDF में सेव करने के लिए Print / Save as PDF दबाएँ और print window में PDF चुनें।</p>
 </section>
+  
+<!-- CY ACCOUNTING HUB PROFESSIONAL DASHBOARD -->
+
+<section class="dashboard" id="main-dashboard">
+
+  <div class="dashboard-heading">
+    <h2>Welcome to CY Accounting Hub</h2>
+    <p>Learn Accounting, GST, Taxation & Practical Skills</p>
+  </div>
+
+  <div class="dashboard-grid">
+
+    <a href="#basics" class="dashboard-card dash-accounting">
+      <span class="dashboard-icon">📚</span>
+      <h3>Accounting</h3>
+      <p>Accounting Basics, Journal, Ledger, Trial Balance और Final Accounts</p>
+    </a>
+
+    <a href="#gstcalc" class="dashboard-card dash-gst">
+      <span class="dashboard-icon">📊</span>
+      <h3>GST & Returns</h3>
+      <p>GST Concepts, ITC, RCM, Invoices और GST Returns</p>
+    </a>
+
+    <a href="#taxcalc" class="dashboard-card dash-tax">
+      <span class="dashboard-icon">💰</span>
+      <h3>Income Tax</h3>
+      <p>Income Tax Rules, Tax Calculation और ITR Learning</p>
+    </a>
+
+    <a href="#tdscalc" class="dashboard-card dash-tds">
+      <span class="dashboard-icon">🧾</span>
+      <h3>TDS & TCS</h3>
+      <p>TDS Sections, Rates, Limits और Practical Entries</p>
+    </a>
+
+    <a href="#calculators" class="dashboard-card dash-tally">
+      <span class="dashboard-icon">💻</span>
+      <h3>Tally & Practical</h3>
+      <p>Vouchers, GST Entries और Office Accounting Practice</p>
+    </a>
+
+    <a href="#practice" class="dashboard-card dash-practice">
+      <span class="dashboard-icon">🎯</span>
+      <h3>Practice & Tests</h3>
+      <p>Practical Questions, MCQs और Accounting Tests</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- END PROFESSIONAL DASHBOARD -->
+  
 <section class="card searchable topic-content" id="basics">
 <h2>1. Accounting (लेखांकन) क्या है?</h2>
 <h3>सरल परिभाषा</h3>
