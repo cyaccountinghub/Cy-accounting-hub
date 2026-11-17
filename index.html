@@ -1071,12 +1071,13 @@ resetGST();calculateTDS();calculateIncomeTax();buildInvoice();
 
 
 <script>
-/* CY ACCOUNTING HUB - ALL DASHBOARD CARDS DIRECT OPEN */
+/* CY ACCOUNTING HUB - DASHBOARD CARD OPEN/CLOSE */
 
 document.addEventListener("DOMContentLoaded", function () {
 
   const dashboard = document.getElementById("main-dashboard");
   const hero = document.getElementById("home");
+  const gstNotes = document.getElementById("cy-gst-notes");
 
   if (!dashboard) return;
 
@@ -1087,6 +1088,11 @@ document.addEventListener("DOMContentLoaded", function () {
     "display:block;margin:0 0 18px;padding:12px 18px;background:#123b63;color:white;border:0;border-radius:9px;font-size:15px;font-weight:bold;";
 
   let currentTarget = null;
+
+  /* Keep GST Notes hidden on initial page load */
+  if (gstNotes) {
+    gstNotes.hidden = true;
+  }
 
   dashboard.querySelectorAll(".dashboard-card").forEach(function(card) {
 
@@ -1108,6 +1114,11 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".topic-content").forEach(function(section) {
         section.classList.remove("active");
       });
+
+      /* Show selected section */
+      if (target.id === "cy-gst-notes") {
+        target.hidden = false;
+      }
 
       if (target.classList.contains("topic-content")) {
         target.classList.add("active");
@@ -1134,10 +1145,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+  /* Back to Dashboard */
   backButton.addEventListener("click", function() {
 
-    if (currentTarget && currentTarget.classList.contains("topic-content")) {
-      currentTarget.classList.remove("active");
+    if (currentTarget) {
+
+      if (currentTarget.classList.contains("topic-content")) {
+        currentTarget.classList.remove("active");
+      }
+
+      if (currentTarget.id === "cy-gst-notes") {
+        currentTarget.hidden = true;
+      }
     }
 
     backButton.remove();
@@ -1158,25 +1177,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const gstCard = document.getElementById("cy-gst-card");
-  const gstNotes = document.getElementById("cy-gst-notes");
-
-  if (gstCard && gstNotes) {
-    gstCard.addEventListener("click", function (event) {
-      event.preventDefault();
-      gstNotes.hidden = false;
-      gstNotes.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    });
-  }
-});
-</script>
+  
+  
 
   
 </body>
