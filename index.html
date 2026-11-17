@@ -264,7 +264,7 @@ nav {
       <p>Accounting Basics, Journal, Ledger, Trial Balance और Final Accounts</p>
     </a>
 
-    <a href="#gstcalc" class="dashboard-card dash-gst">
+    <a href="#cy-gst-notes" class="dashboard-card dash-gst" id="cy-gst-card">
       <span class="dashboard-icon">📊</span>
       <h3>GST & Returns</h3>
       <p>GST Concepts, ITC, RCM, Invoices और GST Returns</p>
@@ -500,6 +500,193 @@ nav {
 </div>
 <p class="small">GST-inclusive mode में entered amount को total amount माना जाता है। Taxable value = total ÷ (1 + rate/100)। CGST/SGST split केवल calculator का सामान्य split है; लागू कानून/विशेष दरों की जाँच करें।</p>
 </section>
+
+
+<style>
+#cy-gst-notes{font-family:Arial,'Noto Sans Devanagari',sans-serif;color:#243247;line-height:1.75;font-size:15px}
+#cy-gst-notes *{box-sizing:border-box}
+#cy-gst-notes .cy-gst-cover{background:linear-gradient(135deg,#123b67,#176b87);color:#fff;padding:24px 18px;border-radius:14px;margin-bottom:20px;text-align:center}
+#cy-gst-notes .cy-gst-cover h1{font-size:25px;line-height:1.35;margin:0 0 8px;color:#fff}
+#cy-gst-notes .cy-gst-cover p{color:#eaf5ff;margin:5px 0}
+#cy-gst-notes h2{background:#eaf3fb;border-left:5px solid #1673a5;padding:11px 13px;border-radius:7px;color:#123b67;font-size:20px;margin:25px 0 12px}
+#cy-gst-notes h3{color:#116b78;font-size:17px;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid #d9e5ed}
+#cy-gst-notes p{margin:9px 0}
+#cy-gst-notes .cy-center{text-align:center;font-weight:600}
+#cy-gst-notes ul{padding-left:23px;margin:8px 0 15px}
+#cy-gst-notes li{margin:5px 0;padding-left:2px}
+#cy-gst-notes .cy-table-wrap{width:100%;overflow-x:auto;margin:13px 0 18px;border:1px solid #d5e0e8;border-radius:9px}
+#cy-gst-notes table{border-collapse:collapse;width:100%;min-width:460px;background:#fff}
+#cy-gst-notes th{background:#e6f0f8;color:#173d5d;font-weight:700}
+#cy-gst-notes th,#cy-gst-notes td{border:1px solid #d5e0e8;padding:9px 10px;text-align:left;vertical-align:top}
+#cy-gst-notes tr:nth-child(even) td{background:#f8fbfd}
+#cy-gst-notes strong{color:#173d5d}
+#cy-gst-notes .cy-gst-end{margin-top:24px;text-align:center;color:#64748b;font-weight:700}
+@media(max-width:600px){#cy-gst-notes{font-size:14px}#cy-gst-notes .cy-gst-cover h1{font-size:21px}#cy-gst-notes h2{font-size:18px}#cy-gst-notes h3{font-size:16px}#cy-gst-notes th,#cy-gst-notes td{padding:7px}}
+</style>
+
+<section id="cy-gst-notes" class="cy-gst-notes" hidden>
+
+<div class="cy-gst-cover">
+  <h1>CY ACCOUNTING HUB<br>GST FUNDAMENTALS</h1>
+  <p>शुरुआत से समझें — आसान हिन्दी में</p>
+  <p>परिभाषाएँ • कानून • GST Rates • Registration • ITC • Returns • Invoice • Practical Examples</p>
+  <p>Reference date: 01 November 2026</p>
+</div>
+<p class="cy-center"><strong>GST FUNDAMENTALS</strong></p>
+<p class="cy-center"><strong>शुरुआत से समझें — आसान हिन्दी में</strong></p>
+<p class="cy-center">परिभाषाएँ • कानून • GST Rates • Registration • ITC • Returns • Invoice • Practical Examples</p>
+<p class="cy-center"><strong>कानूनी स्थिति का संदर्भ: 01 November 2026</strong></p>
+<p class="cy-center">Prepared for learning and practical accounting understanding\nCY Accounting Hub</p>
+<h2>इस नोट्स को कैसे पढ़ें?</h2>
+<p>यह सामग्री उस विद्यार्थी के लिए है जिसे GST की शुरुआत भी नहीं पता। हर विषय को आसान अर्थ, कानूनी समझ और उदाहरण के साथ समझाया गया है।</p>
+<ul><li>पहले परिभाषा पढ़ें, फिर उदाहरण को अपने शब्दों में दोहराएँ।</li><li>वास्तविक invoice/return में rate लगाने से पहले HSN/SAC और लागू notification जाँचें।</li><li>GST में बदलाव Act, Rules, Notifications और Circulars से होते हैं। GST Council की recommendation अपने-आप कानून नहीं बनती।</li></ul>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>कानूनी स्पष्टता — </strong></span>भारत में मुख्य केंद्रीय कानून Central Goods and Services Tax Act, 2017 (CGST Act) है। इसके साथ IGST Act, 2017, संबंधित राज्य का SGST Act, UTGST Act और GST Compensation Cess Act लागू होते हैं। “GST Act 2025” नाम का अलग मुख्य केंद्रीय GST कानून नहीं है। 2025 के संशोधन/नियम अलग अधिसूचनाओं से होते हैं।</th></tr></table></div>
+<h2>विषय-सूची</h2>
+<ul><li>1. GST परिचय और उद्देश्य</li><li>2. GST के प्रकार</li><li>3. Supply और उसके प्रकार</li><li>4. GST Rates और HSN/SAC</li><li>5. महत्वपूर्ण परिभाषाएँ</li><li>6. Registration और Turnover</li><li>7. Composition और QRMP</li><li>8. Time, Place और Value of Supply</li><li>9. ITC</li><li>10. Invoice, Debit Note और Credit Note</li><li>11. E-Invoice और E-Way Bill</li><li>12. GST Returns</li><li>13. Tax Payment और Ledgers</li><li>14. RCM</li><li>15. Export, SEZ और Deemed Export</li><li>16. Refund, Assessment, Audit और Appeal</li><li>17. Practical Calculations/Tally</li><li>18. सामान्य गलतियाँ और Self-test</li><li>19. Official Sources</li></ul>
+<h2>1. GST का परिचय और उद्देश्य</h2>
+<h3>GST क्या है?</h3>
+<p>GST का पूरा नाम Goods and Services Tax (वस्तु एवं सेवा कर) है। यह भारत में वस्तुओं और सेवाओं की supply पर लगने वाला अप्रत्यक्ष कर (Indirect Tax) है। सामान्यतः अंतिम उपभोक्ता इसका आर्थिक भार उठाता है, जबकि registered supplier ग्राहक से tax लेकर सरकार को जमा करता है।</p>
+<p>उदाहरण: ₹1,000 का सामान 18% GST पर बेचा। GST ₹180 और ग्राहक से कुल ₹1,180 लिए जाएँगे। पात्र खरीद पर मिले ITC को नियमों के अनुसार घटाकर शेष tax जमा किया जाता है।</p>
+<h3>GST के उद्देश्य</h3>
+<ul><li>केंद्र और राज्यों के कई अप्रत्यक्ष करों को साझा व्यवस्था में लाना।</li><li>Tax पर tax यानी cascading effect को कम करना।</li><li>Input Tax Credit के जरिए supply chain को जोड़ना।</li><li>Online registration, return और payment से पारदर्शिता बढ़ाना।</li><li>देश में एकीकृत बाजार को बढ़ावा देना।</li></ul>
+<p>GST से पहले Excise Duty, Service Tax, VAT, Entry Tax जैसे कई कर लागू थे। GST ने इनमें से कई करों को समाहित किया। Customs Duty और कुछ अन्य कर अलग व्यवस्था में बने हुए हैं।</p>
+<h2>2. GST के प्रकार</h2>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>कर</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>कब लगता है?</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>उदाहरण</strong></span></th></tr><tr><td style="">CGST</td><td style="">एक ही राज्य के भीतर taxable supply पर केंद्र का हिस्सा।</td><td style="">बिहार के भीतर 18% supply: 9% CGST</td></tr><tr><td style="">SGST</td><td style="">एक ही राज्य के भीतर राज्य का हिस्सा।</td><td style="">उसी supply पर 9% Bihar SGST</td></tr><tr><td style="">UTGST</td><td style="">विधायिका रहित केंद्रशासित प्रदेश में intra-UT supply पर।</td><td style="">लागू UT में CGST + UTGST</td></tr><tr><td style="">IGST</td><td style="">Inter-State supply और imports पर सामान्यतः।</td><td style="">बिहार से पश्चिम बंगाल: 18% IGST</td></tr><tr><td style="">Compensation Cess</td><td style="">केवल निर्दिष्ट वस्तुओं/मामलों पर।</td><td style="">Notification के अनुसार अतिरिक्त cess</td></tr></table></div>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>याद रखने का नियम — </strong></span>एक ही राज्य के अंदर सामान्य taxable sale = CGST + SGST; अलग राज्यों के बीच सामान्य taxable sale = IGST। लेकिन अंतिम निर्णय Place of Supply के नियमों से करें।</th></tr></table></div>
+<h3>Intra-State और Inter-State</h3>
+<p>Intra-State: supplier का स्थान और Place of Supply एक ही राज्य में हो। Inter-State: सामान्यतः दोनों अलग राज्य/UT में हों या कानून की विशेष स्थिति लागू हो। उदाहरण: पटना से पटना बिक्री पर CGST+SGST; पटना से कोलकाता बिक्री पर सामान्यतः IGST, यदि Place of Supply पश्चिम बंगाल है।</p>
+<h2>3. Supply और उसके प्रकार</h2>
+<h3>Supply क्या है?</h3>
+<p>GST में Supply एक व्यापक कानूनी शब्द है। इसमें Sale, Transfer, Barter, Exchange, Licence, Rental, Lease या Disposal शामिल हो सकते हैं, यदि वे व्यवसाय के दौरान/व्यवसाय को आगे बढ़ाने के लिए और consideration के साथ हों। Schedule I की कुछ गतिविधियाँ बिना consideration के भी supply मानी जा सकती हैं।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>प्रकार</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>आसान अर्थ</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>उदाहरण/ध्यान</strong></span></th></tr><tr><td style="">Taxable Supply</td><td style="">जिस पर GST देय है।</td><td style="">18% पर मशीन की बिक्री।</td></tr><tr><td style="">Exempt Supply</td><td style="">अधिसूचना से छूट; इसमें nil-rated और non-taxable supply भी शामिल हो सकती हैं।</td><td style="">अधिसूचित छूट वाली सेवा।</td></tr><tr><td style="">Nil-rated</td><td style="">Rate schedule में 0% rate।</td><td style="">संबंधित HSN entry देखें।</td></tr><tr><td style="">Non-GST</td><td style="">जिस पर GST levy लागू नहीं/दायरे से बाहर।</td><td style="">मानव उपभोग की शराब; कुछ petroleum products की GST levy लागू होने तक बाहर।</td></tr><tr><td style="">Zero-rated</td><td style="">Export या SEZ को authorised operations हेतु supply।</td><td style="">Export/SEZ; ITC/refund की विशेष व्यवस्था।</td></tr><tr><td style="">Mixed Supply</td><td style="">अलग-अलग supplies एक कीमत पर, naturally bundled नहीं।</td><td style="">एक hamper में अलग सामान एक combined price पर।</td></tr><tr><td style="">Composite Supply</td><td style="">Naturally bundled supplies जिनमें principal supply हो।</td><td style="">माल के साथ सामान्य packing/transport।</td></tr></table></div>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>महत्वपूर्ण अंतर — </strong></span>Zero-rated का अर्थ exempt नहीं है। पात्र शर्तों के अधीन zero-rated supply पर ITC/refund मिल सकता है। Exempt supply पर सामान्यतः ITC नहीं मिलता या proportionate reversal होता है।</th></tr></table></div>
+<h2>4. GST Rates — 01 November 2026</h2>
+<p>GST rate वस्तु/सेवा के HSN/SAC classification, विवरण, उपयोग, पैकिंग/ब्रांडिंग की शर्तों और लागू notification पर निर्भर करती है। नीचे rate framework पढ़ाई के लिए है; हर product पर स्वतः लागू होने वाली सूची नहीं।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>Rate category</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>अर्थ</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>सावधानी</strong></span></th></tr><tr><td style="">0% / Nil</td><td style="">Nil-rated या exempt entry हो सकती है; दोनों का कानूनी प्रभाव अलग है।</td><td style="">छूट और nil-rate entry अलग-अलग जाँचें।</td></tr><tr><td style="">5%</td><td style="">2026 rationalised structure की मुख्य कम दरों में से एक।</td><td style="">केवल notified goods/services पर।</td></tr><tr><td style="">18%</td><td style="">2026 structure की मुख्य standard दरों में से एक।</td><td style="">कई सामान्य supplies; HSN/SAC जरूरी।</td></tr><tr><td style="">40%</td><td style="">चयनित supplies पर special उच्च दर।</td><td style="">सभी luxury goods पर स्वतः न लगाएँ।</td></tr><tr><td style="">अन्य विशेष rate/cess</td><td style="">कुछ supplies पर concessional/special rate या cess हो सकता है।</td><td style="">Notification और conditions पढ़ें।</td></tr></table></div>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>Rate लगाने से पहले 5 जाँच — </strong></span>(1) HSN/SAC, (2) पूरा description, (3) supply date, (4) CGST/SGST/IGST या exemption notification, (5) कोई condition, cess या RCM तो नहीं।</th></tr></table></div>
+<h3>GST की गणना</h3>
+<p>GST Amount = Taxable Value × GST Rate ÷ 100</p>
+<p>उदाहरण: Taxable value ₹50,000 और rate 18% → GST ₹9,000। Intra-State: CGST ₹4,500 + SGST ₹4,500। Inter-State: IGST ₹9,000। Total ₹59,000।</p>
+<p>GST-inclusive price से taxable value = Inclusive amount × 100 ÷ (100 + GST rate)। उदाहरण: ₹1,180 inclusive at 18% → taxable value ₹1,000 और GST ₹180।</p>
+<h3>HSN और SAC</h3>
+<p>HSN (Harmonised System of Nomenclature) वस्तुओं का classification code है। SAC (Services Accounting Code) सेवाओं का classification code है। सही code से rate और return reporting तय करने में मदद मिलती है।</p>
+<h2>5. महत्वपूर्ण परिभाषाएँ</h2>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>शब्द</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>आसान अर्थ</strong></span></th></tr><tr><td style="">Goods</td><td style="">चल संपत्ति (movable property), कानून में दिए अपवादों के अधीन।</td></tr><tr><td style="">Services</td><td style="">Goods, money और securities के अलावा कुछ भी; money/securities संबंधी गतिविधियों का treatment अलग हो सकता है।</td></tr><tr><td style="">Person</td><td style="">Individual, HUF, company, firm, LLP, trust, association, government आदि।</td></tr><tr><td style="">Business</td><td style="">व्यापार, वाणिज्य, निर्माण, पेशा आदि; हर स्थिति में profit motive जरूरी नहीं।</td></tr><tr><td style="">Consideration</td><td style="">Supply के बदले भुगतान/प्रतिफल; कानून में कुछ अपवाद हैं।</td></tr><tr><td style="">Taxable Person</td><td style="">जो GST registration के लिए liable है या registered है।</td></tr><tr><td style="">Registered Person</td><td style="">जिसे GST registration मिला है।</td></tr><tr><td style="">Aggregate Turnover</td><td style="">एक PAN के सभी GSTIN का पूरे भारत में कुल turnover; taxable, exempt, exports और inter-State supplies शामिल; GST taxes और RCM inward supplies शामिल नहीं।</td></tr><tr><td style="">Input Tax</td><td style="">Business के लिए प्राप्त inward supply पर लगा GST, कानून के अधीन।</td></tr><tr><td style="">Output Tax</td><td style="">Taxable outward supplies पर देय GST; RCM tax का treatment अलग है।</td></tr><tr><td style="">ITC</td><td style="">पात्र inward supply पर GST का credit, जिसे नियमों के अनुसार output tax से set-off किया जा सकता है।</td></tr><tr><td style="">Taxable Value</td><td style="">वह value जिस पर GST calculate होता है; सामान्यतः transaction value, यदि शर्तें पूरी हों।</td></tr><tr><td style="">Supplier</td><td style="">जो goods/services supply करता है।</td></tr><tr><td style="">Recipient</td><td style="">जिसे supply मिलती है या जो consideration देने के लिए उत्तरदायी है।</td></tr><tr><td style="">Place of Supply</td><td style="">कानूनी नियमों से तय स्थान; इससे IGST या CGST+SGST तय करने में मदद मिलती है।</td></tr><tr><td style="">RCM</td><td style="">निर्दिष्ट supply में supplier के बजाय recipient tax चुकाता है।</td></tr><tr><td style="">E-Commerce Operator</td><td style="">Electronic platform चलाने वाला जो e-commerce को facilitate करता है।</td></tr><tr><td style="">SEZ</td><td style="">Special Economic Zone; authorised operations के लिए supply zero-rated हो सकती है।</td></tr><tr><td style="">Export of Services</td><td style="">कानून की सभी निर्धारित शर्तें पूरी करने वाली सेवा supply।</td></tr></table></div>
+<h2>6. GST Registration</h2>
+<p>GST Registration वह प्रक्रिया है जिसमें पात्र व्यक्ति GST portal पर आवेदन करके GSTIN प्राप्त करता है। Registration के बाद tax invoice, returns और अन्य compliance लागू हो सकते हैं।</p>
+<h3>सामान्य registration threshold</h3>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>व्यवसाय</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>सामान्य सीमा</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>ध्यान दें</strong></span></th></tr><tr><td style="">केवल goods</td><td style="">कई राज्यों में ₹40 लाख</td><td style="">कुछ राज्यों/व्यवसायों में कम सीमा/अपवाद।</td></tr><tr><td style="">Services</td><td style="">₹20 लाख</td><td style="">कुछ special category राज्यों में सामान्यतः ₹10 लाख।</td></tr><tr><td style="">Goods + Services</td><td style="">आमतौर पर ₹20 लाख</td><td style="">Goods-only ₹40 लाख मानकर न चलें।</td></tr></table></div>
+<p>ये सामान्य सीमाएँ हैं। Section 24 की compulsory registration categories, inter-State supply के अपवाद, e-commerce rules, notified exemptions और राज्य-विशेष अधिसूचनाएँ अलग से जाँचें।</p>
+<h3>Aggregate Turnover का उदाहरण</h3>
+<p>एक PAN पर बिहार में ₹12 लाख और झारखंड में ₹11 लाख कारोबार है। कुल aggregate turnover ₹23 लाख होगा। PAN के सभी राज्यों का कारोबार जोड़कर देखा जाता है।</p>
+<h3>GSTIN</h3>
+<p>GSTIN 15 अंकों का Goods and Services Tax Identification Number है। इसमें State Code, PAN आधारित भाग, entity number और checksum शामिल होते हैं। GSTIN और PAN एक ही चीज नहीं हैं।</p>
+<h3>Registration की सामान्य श्रेणियाँ</h3>
+<ul><li>Regular taxpayer</li><li>Composition taxpayer</li><li>Casual taxable person</li><li>Non-resident taxable person</li><li>Input Service Distributor</li><li>TDS/TCS deductor/collector, जहाँ लागू</li><li>अन्य notified special categories</li></ul>
+<h2>7. Composition Scheme और QRMP</h2>
+<h3>Composition Scheme</h3>
+<p>यह पात्र छोटे कारोबारियों के लिए सरल tax payment scheme है। पात्र taxpayer निर्धारित दर से turnover पर tax देता है। वह सामान्यतः ITC claim नहीं कर सकता और ग्राहक से GST अलग से collect नहीं कर सकता; Tax Invoice के बजाय Bill of Supply देता है।</p>
+<p>सामान्य सीमा कई राज्यों में पिछले वित्त वर्ष का aggregate turnover ₹1.5 crore तक है; कुछ राज्यों में कम सीमा हो सकती है। Services के लिए अलग 6% scheme की सीमा सामान्यतः ₹50 lakh तक है, शर्तों के अधीन। Section 10 और संबंधित Rules/notifications देखें।</p>
+<ul><li>सामान्यतः inter-State outward taxable supply की अनुमति नहीं।</li><li>कुछ व्यवसाय/व्यक्तियों को scheme से बाहर रखा गया है।</li><li>Composition में ITC उपलब्ध नहीं होता।</li></ul>
+<h3>QRMP</h3>
+<p>QRMP = Quarterly Return Monthly Payment. पात्र taxpayer (सामान्यतः aggregate turnover ₹5 crore तक और अन्य शर्तें पूरी हों) GSTR-1 और GSTR-3B quarterly file कर सकता है, लेकिन tax का payment हर महीने करता है। IFF से पहले दो महीनों के B2B invoices upload किए जा सकते हैं।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>याद रखें — </strong></span>QRMP में return quarterly है, tax payment monthly है।</th></tr></table></div>
+<h2>8. Time, Place और Value of Supply</h2>
+<h3>Time of Supply</h3>
+<p>Time of Supply वह समय है जिससे तय होता है कि GST liability किस tax period में बनेगी। Goods और services के लिए अलग statutory rules हैं; invoice date, payment date और supply completion जैसे factors देखे जाते हैं। RCM में अलग नियम हो सकते हैं।</p>
+<h3>Place of Supply</h3>
+<p>Place of Supply वह कानूनी स्थान है जहाँ supply मानी जाती है। Goods में movement, delivery, bill-to/ship-to और installation के नियम लागू हो सकते हैं। Services में recipient location, immovable property, event और transportation के अलग नियम हैं।</p>
+<p>उदाहरण: केरल का seller तमिलनाडु के buyer को माल भेजता है। यदि Place of Supply तमिलनाडु है, तो सामान्यतः IGST लगेगा। केवल billing address देखकर निर्णय न करें।</p>
+<h3>Value of Supply</h3>
+<p>सामान्यतः unrelated parties के बीच और price ही sole consideration होने पर transaction value taxable value होती है। Packing, commission, incidental expenses, late-payment interest आदि कुछ परिस्थितियों में value में जुड़ सकते हैं। Discounts पर Section 15 की शर्तें लागू होती हैं।</p>
+<p>उदाहरण: माल ₹1,00,000 + taxable packing ₹2,000 = taxable value ₹1,02,000। 18% GST = ₹18,360। वास्तविक treatment facts और Section 15 से तय होगा।</p>
+<h2>9. Input Tax Credit (ITC)</h2>
+<p>ITC का अर्थ है business की पात्र खरीद पर लगे GST का credit। यह tax-on-tax कम करता है।</p>
+<h3>ITC की मुख्य शर्तें</h3>
+<ul><li>व्यक्ति registered हो और goods/services business के course or furtherance में उपयोग हों।</li><li>Tax invoice, debit note या मान्य prescribed document हो।</li><li>Supplier invoice details furnish करे और recipient को communicate हों; applicable GSTR-2B conditions देखें।</li><li>Goods/services प्राप्त हुए हों; deemed receipt rules भी हो सकते हैं।</li><li>Supplier द्वारा tax payment और recipient की return filing सहित Section 16 की शर्तें पूरी हों।</li><li>180 दिनों में supplier को value + tax भुगतान न होने पर prescribed reversal/interest नियम देखें।</li><li>Section 16(4) की time limit और अन्य restrictions का पालन हो।</li></ul>
+<h3>Blocked ITC</h3>
+<p>Section 17(5) में blocked credits की सूची है। उदाहरण के तौर पर कुछ motor vehicles, personal consumption, कुछ food/beverages और club/fitness membership पर restrictions हो सकती हैं; exceptions भी हैं। 2026 में Council ने कुछ provisions में बदलाव की सिफारिश की थी। Recommendation को लागू कानून न मानें; enacted amendment और commencement notification देखें।</p>
+<h3>ITC उदाहरण</h3>
+<p>Output GST ₹18,000 और eligible ITC ₹11,000 है। सरल गणना में net tax ₹7,000 होगा। वास्तविक utilisation IGST/CGST/SGST set-off order और ledger balance के अनुसार करें।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>सावधानी — </strong></span>GSTR-2B में invoice दिखना अकेले पर्याप्त नहीं। Invoice, receipt, business use, tax payment, return filing, blocked credit, reversal और time limit भी जाँचें।</th></tr></table></div>
+<h2>10. Invoice, Bill of Supply, Debit Note और Credit Note</h2>
+<h3>Tax Invoice</h3>
+<p>Registered regular taxpayer taxable supply के लिए Tax Invoice जारी करता है। इसमें supplier/recipient details, GSTIN, serial number, date, HSN/SAC, description, quantity, taxable value, rate, tax amount और place of supply जैसे prescribed particulars होते हैं।</p>
+<h3>Bill of Supply</h3>
+<p>Composition taxpayer या exempt supply करने वाला पात्र supplier Bill of Supply जारी करता है। इसमें GST अलग से collect नहीं किया जाता।</p>
+<h3>Debit Note और Credit Note</h3>
+<p>Credit Note: जब original invoice में taxable value/tax अधिक हो, goods return हों या मान्य कारण से value घटानी हो, तो supplier Section 34 के अनुसार credit note जारी कर सकता है। Debit Note: जब original invoice में taxable value/tax कम charge हुआ हो, तो supplier debit note जारी कर सकता है।</p>
+<p>यह स्पष्ट करें कि GST document कौन जारी कर रहा है। Seller द्वारा buyer को जारी GST debit note और buyer द्वारा seller को भेजा गया commercial debit note अलग हो सकते हैं।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>Document</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>उपयोग</strong></span></th></tr><tr><td style="">Tax Invoice</td><td style="">Taxable outward supply।</td></tr><tr><td style="">Bill of Supply</td><td style="">Exempt supply या composition taxpayer।</td></tr><tr><td style="">Credit Note</td><td style="">Value/tax घटाना या goods return जैसी स्थिति; Section 34 की शर्तें।</td></tr><tr><td style="">Debit Note</td><td style="">Original invoice में कम taxable value/tax charge हुआ हो।</td></tr><tr><td style="">Receipt Voucher</td><td style="">Advance प्राप्त होने पर, जहाँ लागू।</td></tr><tr><td style="">Refund Voucher</td><td style="">Advance मिला लेकिन supply नहीं हुई और refund दिया गया।</td></tr></table></div>
+<h2>11. E-Invoice और E-Way Bill</h2>
+<h3>E-Invoice</h3>
+<p>E-Invoice में notified Invoice Registration Portal (IRP) पर invoice data report करके IRN और signed QR code प्राप्त किया जाता है। सामान्य mandate ₹5 crore या अधिक aggregate annual turnover वाले पात्र taxpayers पर 1 August 2023 से लागू है (किसी preceding FY 2017-18 से आगे), notified exclusions के अधीन।</p>
+<p>E-invoice का अर्थ हर invoice को GST portal पर manually बनाना नहीं; accounting/ERP system से prescribed data IRP को भेजना होता है।</p>
+<h3>E-Way Bill</h3>
+<p>E-Way Bill माल की movement के लिए electronic document है। सामान्यतः ₹50,000 से अधिक consignment value पर movement से पहले इसकी आवश्यकता हो सकती है; exceptions, state-specific rules और movement conditions लागू होते हैं।</p>
+<ul><li>Part A में goods, consignor/consignee, invoice, value और HSN आदि।</li><li>Part B में vehicle/transporter details, जहाँ आवश्यक।</li><li>Validity distance और applicable rules के अनुसार होती है।</li></ul>
+<h2>12. GST Returns और सामान्य Due Dates</h2>
+<p>Return वह statement है जिसमें taxpayer outward supply, ITC, tax liability, payment और अन्य आवश्यक विवरण देता है। नीचे सामान्य due dates हैं; extension और taxpayer category के कारण बदल सकती हैं।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>Form</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>उद्देश्य</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>सामान्य due date/frequency</strong></span></th></tr><tr><td style="">GSTR-1</td><td style="">Outward supplies details</td><td style="">Monthly: अगले महीने की 11 तारीख; QRMP: quarter के बाद 13 तारीख।</td></tr><tr><td style="">IFF</td><td style="">QRMP के पहले दो महीनों के B2B invoices</td><td style="">वैकल्पिक; अगले महीने की 13 तारीख तक।</td></tr><tr><td style="">GSTR-3B</td><td style="">Summary return और tax payment</td><td style="">Monthly: सामान्यतः 20 तारीख; QRMP quarterly: राज्य/UT समूह के अनुसार 22/24।</td></tr><tr><td style="">CMP-08</td><td style="">Composition quarterly payment statement</td><td style="">Quarter के बाद सामान्यतः 18 तारीख।</td></tr><tr><td style="">GSTR-4</td><td style="">Composition annual return</td><td style="">सामान्यतः FY के बाद 30 April; current due date जाँचें।</td></tr><tr><td style="">GSTR-9</td><td style="">Annual return</td><td style="">सामान्यतः FY के बाद 31 December, जहाँ लागू।</td></tr><tr><td style="">GSTR-9C</td><td style="">Reconciliation statement</td><td style="">जहाँ कानून/threshold के अनुसार लागू।</td></tr><tr><td style="">GSTR-6</td><td style="">ISD return</td><td style="">Monthly; सामान्यतः अगले महीने की 13 तारीख।</td></tr><tr><td style="">GSTR-7</td><td style="">TDS return</td><td style="">Monthly; सामान्यतः अगले महीने की 10 तारीख।</td></tr><tr><td style="">GSTR-8</td><td style="">E-commerce TCS statement</td><td style="">Monthly; सामान्यतः अगले महीने की 10 तारीख।</td></tr></table></div>
+<p>GSTR-2A/2B inward invoice/ITC statements हैं; इन्हें GSTR-1 जैसी outward return न समझें।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>Due date चेतावनी — </strong></span>Filing से पहले GST portal पर संबंधित tax period की due date और CBIC extension notification जरूर जाँचें।</th></tr></table></div>
+<h2>13. Tax Payment और Electronic Ledgers</h2>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>Ledger</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>काम</strong></span></th></tr><tr><td style="">Electronic Cash Ledger</td><td style="">चालान आदि से जमा cash balance; tax, interest, fee, penalty आदि भुगतान।</td></tr><tr><td style="">Electronic Credit Ledger</td><td style="">Eligible ITC balance; output tax liability set-off, नियमों के अनुसार।</td></tr><tr><td style="">Electronic Liability Register</td><td style="">दर्ज tax, interest, fee और अन्य liabilities।</td></tr></table></div>
+<p>ITC को cash की तरह हर मद में उपयोग नहीं कर सकते। IGST, CGST और SGST/UTGST set-off का क्रम Section 49 और Rules से नियंत्रित है। Interest, late fee और penalty सामान्यतः cash से चुकाए जाते हैं।</p>
+<h2>14. Reverse Charge Mechanism (RCM)</h2>
+<p>RCM में अधिसूचित goods/services की supply पर supplier के बजाय recipient GST चुकाता है। Forward charge में supplier tax collect करता है; RCM में recipient liability उठाता है।</p>
+<p>उदाहरण: Notified service की taxable value ₹10,000 और rate 18% है। Recipient ₹1,800 tax सरकार को जमा करेगा। पात्र होने पर payment के बाद ITC लिया जा सकता है, पर सामान्य ITC conditions लागू होंगी।</p>
+<ul><li>हर unregistered supplier से खरीद पर RCM नहीं लगता; केवल notified cases में।</li><li>RCM tax सामान्यतः cash ledger से चुकाया जाता है; ITC से सीधे RCM tax payment नहीं।</li><li>RCM liability को return और books में सही report करें।</li></ul>
+<h2>15. Export, SEZ और Deemed Export</h2>
+<h3>Export</h3>
+<p>Export of goods में माल भारत से बाहर ले जाया जाता है। Export of services के लिए supplier India में, recipient outside India, place of supply outside India, payment convertible foreign exchange/अनुमत INR में और दोनों केवल distinct establishments न हों—जैसी सभी statutory conditions पूरी होनी चाहिए।</p>
+<h3>Zero-rated supply</h3>
+<p>Export और SEZ unit/developer को authorised operations के लिए supply zero-rated हो सकती है। पात्रता के अनुसार LUT/Bond के तहत बिना IGST भुगतान export और eligible unutilised ITC refund की व्यवस्था हो सकती है।</p>
+<h3>SEZ supply</h3>
+<p>SEZ यानी Special Economic Zone. SEZ unit/developer को authorised operations के लिए supply zero-rated हो सकती है। केवल buyer के नाम में SEZ लिखे होने से हर खरीद zero-rated नहीं होती; authorised operations और prescribed endorsement/evidence जरूरी हैं।</p>
+<h3>Deemed Export</h3>
+<p>Deemed Export में माल भारत से बाहर नहीं जाता, फिर भी सरकार द्वारा notified कुछ domestic supplies को deemed export माना जाता है। यह हर सरकारी खरीद या हर बड़ी कंपनी को बिक्री नहीं है। संबंधित notification में goods, recipient, supplier और conditions देखनी होती हैं। Deemed export को zero-rated export न समझें; refund/ITC प्रक्रिया अलग हो सकती है।</p>
+<h2>16. Refund, Assessment, Audit और Appeal</h2>
+<h3>Refund</h3>
+<p>Refund पात्र स्थिति में GST राशि वापस माँगना है—जैसे export under LUT में eligible accumulated ITC, inverted duty structure (जहाँ लागू), excess cash balance या excess tax payment। Application, documents, time limit और unjust enrichment के नियम लागू हो सकते हैं।</p>
+<h3>Assessment</h3>
+<p>Assessment tax liability का निर्धारण है। GST में self-assessment मुख्य आधार है; provisional, scrutiny, best judgment और अन्य statutory processes भी हैं।</p>
+<h3>Audit</h3>
+<p>Audit में books, returns, ITC, tax payment और compliance की जाँच होती है। Departmental audit तथा special audit जैसी प्रक्रियाएँ हो सकती हैं।</p>
+<h3>Notice और Appeal</h3>
+<p>Notice विभाग की औपचारिक सूचना है। समय पर reply और supporting documents दें। आदेश से असहमति हो तो prescribed limitation, pre-deposit और प्रक्रिया के अनुसार appeal की जा सकती है।</p>
+<h2>17. Practical Calculations और Tally Examples</h2>
+<h3>Example 1: Intra-State sale</h3>
+<p>बिहार seller ने बिहार buyer को ₹80,000 का माल 18% GST पर बेचा।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>विवरण</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>राशि</strong></span></th></tr><tr><td style="">Taxable value</td><td style="">₹80,000</td></tr><tr><td style="">CGST @ 9%</td><td style="">₹7,200</td></tr><tr><td style="">SGST @ 9%</td><td style="">₹7,200</td></tr><tr><td style="">Invoice total</td><td style="">₹94,400</td></tr></table></div>
+<h3>Example 2: Inter-State sale</h3>
+<p>बिहार से पश्चिम बंगाल taxable sale ₹80,000; rate 18%; place of supply पश्चिम बंगाल।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>विवरण</strong></span></th><th style="background-color:#12345B;"><span style="color:#FFFFFF;"><strong>राशि</strong></span></th></tr><tr><td style="">Taxable value</td><td style="">₹80,000</td></tr><tr><td style="">IGST @ 18%</td><td style="">₹14,400</td></tr><tr><td style="">Invoice total</td><td style="">₹94,400</td></tr></table></div>
+<h3>Example 3: ITC</h3>
+<p>Output GST ₹18,000 और eligible ITC ₹11,000 है। सरल net amount ₹7,000 होगा। वास्तविक set-off IGST/CGST/SGST utilisation order के अनुसार करें।</p>
+<h3>Example 4: Tally Purchase Entry</h3>
+<p>Intra-State credit purchase ₹10,000 + 18% GST: Purchase A/c Dr ₹10,000; Input CGST Dr ₹900; Input SGST Dr ₹900; To Supplier ₹11,800. Ledger group और inventory settings के अनुसार entry करें।</p>
+<h3>Example 5: Tally Sales Entry</h3>
+<p>Customer Dr ₹11,800; To Sales ₹10,000; To Output CGST ₹900; To Output SGST ₹900. Inter-State sale में Output IGST ledger इस्तेमाल होगा।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>Tally सावधानी — </strong></span>Voucher type, tax ledgers, Place of Supply, party GSTIN, stock item HSN/rate और registration state सही रखें। Debit/Credit Note में यह भी स्पष्ट करें कि आप supplier हैं या recipient।</th></tr></table></div>
+<h2>18. सामान्य गलतियाँ और Self-test</h2>
+<ul><li>हर वस्तु पर एक ही rate लगा देना।</li><li>Zero-rated और exempt को एक समझना।</li><li>हर unregistered supplier की खरीद पर RCM मान लेना।</li><li>QRMP में quarterly tax payment समझना।</li><li>GSTIN और PAN को एक समझना।</li><li>केवल invoice address से IGST/CGST-SGST तय करना।</li><li>GSTR-2B में invoice दिखते ही बाकी ITC conditions जाँचे बिना credit लेना।</li><li>GST Council recommendation को लागू कानून मान लेना।</li><li>Debit Note/Credit Note किसने जारी किया, यह न देखना।</li></ul>
+<h3>Self-test — अपने आप उत्तर दीजिए</h3>
+<ul><li>GST direct tax है या indirect tax?</li><li>बिहार के भीतर taxable sale पर कौन-कौन से tax लगते हैं?</li><li>बिहार से झारखंड sale में IGST क्यों लग सकता है?</li><li>Zero-rated और exempt supply में अंतर क्या है?</li><li>Aggregate turnover PAN के आधार पर क्यों देखा जाता है?</li><li>ITC लेने की चार शर्तें लिखिए।</li><li>Composition taxpayer ग्राहक से GST अलग collect कर सकता है?</li><li>QRMP में return और payment की frequency क्या है?</li><li>RCM में tax कौन चुकाता है?</li><li>SEZ की हर supply zero-rated क्यों नहीं होती?</li><li>Tax Invoice और Bill of Supply में अंतर बताइए।</li></ul>
+<h2>19. Official Sources और Update Note</h2>
+<p>इस दस्तावेज़ में 01 November 2026 तक उपलब्ध आधिकारिक सामग्री को ध्यान में रखकर GST fundamentals समझाए गए हैं। 2026 rate rationalisation का मुख्य ढाँचा 5% और 18% तथा चयनित supplies पर 40% special rate के रूप में बताया गया है। फिर भी हर वस्तु/सेवा की वास्तविक दर संबंधित HSN/SAC entry और लागू notification से ही तय होगी।</p>
+<p>CBIC Tax Information Portal पर 28 October 2026 की GST rate notifications सूचीबद्ध थीं, जिनमें 1 November 2026 से प्रभावी बदलाव भी शामिल हैं। 57वीं GST Council meeting की कुछ बातें recommendations हैं; जब तक संबंधित amendment/notification जारी होकर प्रभावी न हो, उन्हें लागू कानून न मानें.</p>
+<ul><li>CBIC Tax Information Portal: https://taxinformation.cbic.gov.in/</li><li>GST Council: https://www.gstcouncil.gov.in/</li><li>CBIC GST: https://cbic-gst.gov.in/</li><li>GST Portal: https://www.gst.gov.in/</li><li>India Code: https://www.indiacode.nic.in/</li></ul>
+<p>कानूनी संदर्भ: CGST Act Sections 2, 7, 9, 10, 15, 16, 17, 22, 24, 31, 34, 37, 39, 49 और 54; IGST Act के inter-State supply, place of supply और zero-rated supply प्रावधान; संबंधित Rules तथा Notifications।</p>
+<div class="cy-table-wrap"><table class="cy-gst-table"><tr><th style="background-color:#FFF2CC;"><span style="color:#12345B;"><strong>अध्ययन संबंधी अस्वीकरण — </strong></span>यह विद्यार्थी-अध्ययन सामग्री है, व्यक्तिगत tax/legal opinion नहीं। वास्तविक filing, invoice, ITC, refund, RCM या rate classification से पहले नवीनतम Gazette notification, CBIC/GST portal और जरूरत पर GST professional से पुष्टि करें।</th></tr></table></div>
+<p class="cy-center"><strong>— समाप्त —</strong></p>
+<div class="cy-gst-end">— समाप्त — | CY Accounting Hub</div>
+</section>
+
+
+
+
+  
 <section class="card searchable topic-content" id="tdscalc">
 <h2>12. TDS Calculator</h2>
 <div class="note warn">यह केवल आपके द्वारा दी गई दर से गणना करता है। यह अपने-आप TDS section, threshold, surcharge, cess, PAN status या exemption तय नहीं करता। सही लागू दर पहले verify करें।</div>
@@ -964,7 +1151,23 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const gstCard = document.getElementById("cy-gst-card");
+  const gstNotes = document.getElementById("cy-gst-notes");
 
+  if (gstCard && gstNotes) {
+    gstCard.addEventListener("click", function (event) {
+      event.preventDefault();
+      gstNotes.hidden = false;
+      gstNotes.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  }
+});
+</script>
 
   
 </body>
