@@ -522,6 +522,15 @@ nav {
 #cy-gst-notes strong{color:#173d5d}
 #cy-gst-notes .cy-gst-end{margin-top:24px;text-align:center;color:#64748b;font-weight:700}
 @media(max-width:600px){#cy-gst-notes{font-size:14px}#cy-gst-notes .cy-gst-cover h1{font-size:21px}#cy-gst-notes h2{font-size:18px}#cy-gst-notes h3{font-size:16px}#cy-gst-notes th,#cy-gst-notes td{padding:7px}}
+
+
+/* Hide GST Notes until GST card is clicked */
+#cy-gst-notes[hidden] {
+    display: none !important;
+}
+  
+
+  
 </style>
 
 <section id="cy-gst-notes" class="cy-gst-notes" hidden>
